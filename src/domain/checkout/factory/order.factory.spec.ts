@@ -2,7 +2,7 @@ import OrderFactory from "./order.factory"
 import { v4 as uuid } from 'uuid'
 
 describe("order factory unit test", () => {
-    it("should create an order", () => {
+    it.skip("should create an order", () => {
         const items = [
             {
                 productId: uuid(),

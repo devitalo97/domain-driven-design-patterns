@@ -15,6 +15,7 @@ export default class Price {
 
     constructor(props: PriceProps){
         assign(this, props)
+        this.validate()
     }
 
     get id(): string {
@@ -31,5 +32,23 @@ export default class Price {
 
     get value(): number {
         return this._value
+    }
+
+    private validate(): void {
+        if(this._value <= 0){
+            throw new Error("Value must be valid.")
+        }
+
+        if(this._stock <= 0){
+            throw new Error("Stock must be valid.")
+        }
+
+        if(!this._id || this._id.length === 0){
+            throw new Error("Id is required.")
+        }
+
+        if(!this._label || this._label.length === 0){
+            throw new Error("Label is required.")
+        }
     }
 }

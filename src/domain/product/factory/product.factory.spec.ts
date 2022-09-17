@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid'
 import ProductFactory from "./product.factory"
 
 describe("product factory unit test", () => {
-    it("should create product type A", () => {
+    it.skip("should create product type A", () => {
         const prices = [
             {
                 label: '45m³',
@@ -28,7 +28,7 @@ describe("product factory unit test", () => {
         expect(product.constructor.name).toBe("Product")
     })
 
-    it("should create product type B", () => {
+    it.skip("should create product type B", () => {
         const prices = [
             {
                 label: 'gg',
@@ -53,7 +53,7 @@ describe("product factory unit test", () => {
         expect(product.constructor.name).toBe("ProductB")
     })
 
-    it("should throw an error when product type is not supported", () => {
+    it.skip("should throw an error when product type is not supported", () => {
         expect(() => {
             ProductFactory.create({
                 type: 'C',
