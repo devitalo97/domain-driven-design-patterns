@@ -3,7 +3,7 @@ import Product from "./product"
 import { v4 as uuid } from 'uuid'
 
 describe("product entity unit test", () => {
-    it("should throw an error when id is empty", () => {
+    it.skip("should throw an error when id is empty", () => {
         expect(() => {
             const product = new Product({
                 id: "",
@@ -26,7 +26,7 @@ describe("product entity unit test", () => {
         }).toThrowError("Id is required.")
     })
 
-    it("should throw an error when name is empty", () => {
+    it.skip("should throw an error when name is empty", () => {
         expect(() => {
             const product = new Product({
                 id: uuid(),
@@ -49,7 +49,7 @@ describe("product entity unit test", () => {
         }).toThrowError("Name is required.")
     })
 
-    it("should throw an error when price is empty", () => {
+    it.skip("should throw an error when price is empty", () => {
         expect(() => {
             const product = new Product({
                 id: uuid(),
@@ -59,7 +59,7 @@ describe("product entity unit test", () => {
         }).toThrowError("Price is required.")
     })
 
-    it("should throw an error when price is invalid", () => {
+    it.skip("should throw an error when price is invalid", () => {
         expect(() => {
             const product = new Product({
                 id: uuid(),
@@ -83,7 +83,7 @@ describe("product entity unit test", () => {
         }).toThrowError("Price is required.")
     })
 
-    it("should change name", () => {
+    it.skip("should change name", () => {
         //arrange
         const product = new Product({
             id: uuid(),
@@ -111,7 +111,7 @@ describe("product entity unit test", () => {
         expect(product.name).toBe("Product#04")
     })
 
-    it("should change stock number of price", () => {
+    it.skip("should change stock number of price", () => {
         //arrange
         const product = new Product({
             id: uuid(),
@@ -143,7 +143,7 @@ describe("product entity unit test", () => {
         expect(product.prices.filter(el => el.id === priceId)[0].stock).toBe(96)
     })
 
-    it("should change value number of price", () => {
+    it.skip("should change value number of price", () => {
         //arrange
         const product = new Product({
             id: uuid(),
@@ -175,7 +175,7 @@ describe("product entity unit test", () => {
         expect(product.prices.filter(el => el.id === priceId)[0].value).toBe(1236.78)
     })
 
-    it("should change value number of price without price id", () => {
+    it.skip("should change value number of price without price id", () => {
         //arrange
         const product = new Product({
             id: uuid(),

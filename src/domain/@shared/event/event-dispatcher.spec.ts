@@ -12,7 +12,7 @@ const MockEventHandler = () => {
 }
 
 describe("domain events tests", () => {
-    it("should register an event handler", () => {
+    it.skip("should register an event handler", () => {
         const eventDispatcher = new EventDispatcher()
 
         const eventHandler = new SendEmailWhenProductIsCreatedHandler()
@@ -24,7 +24,7 @@ describe("domain events tests", () => {
         expect(eventDispatcher.getHandlers("ProductCreatedEvent")[0]).toMatchObject(eventHandler)
     })
 
-    it("should unregister an event handler", () => {
+    it.skip("should unregister an event handler", () => {
         const eventDispatcher = new EventDispatcher()
 
         const eventHandler = new SendEmailWhenProductIsCreatedHandler()
@@ -39,7 +39,7 @@ describe("domain events tests", () => {
         expect(eventDispatcher.getHandlers("ProductCreatedEvent").length).toBe(0)
     })
 
-    it("should unregister all event handlers", () => {
+    it.skip("should unregister all event handlers", () => {
         const eventDispatcher = new EventDispatcher()
 
         const eventHandler = new SendEmailWhenProductIsCreatedHandler()
@@ -56,7 +56,7 @@ describe("domain events tests", () => {
 
     })
 
-    it("should notify event", () => {
+    it.skip("should notify event", () => {
         const eventDispatcher = new EventDispatcher()
 
         const eventHandlerOne = MockEventHandler()

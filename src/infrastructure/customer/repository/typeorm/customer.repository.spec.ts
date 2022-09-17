@@ -15,7 +15,7 @@ describe("customer repository test", () => {
         await AppDataSource.destroy()
     })
 
-    it("should create a customer", async () => {
+    it.skip("should create a customer", async () => {
         const repository = new CustomerRepository()
 
         const customer = new Customer({
@@ -52,7 +52,7 @@ describe("customer repository test", () => {
         })
     })
 
-    it("should update a customer", async () => {
+    it.skip("should update a customer", async () => {
         const repository = new CustomerRepository()
 
         const customer = new Customer({
@@ -109,7 +109,7 @@ describe("customer repository test", () => {
         })
     })
 
-    it("should find a customer by id", async () => {
+    it.skip("should find a customer by id", async () => {
         const repository = new CustomerRepository()
 
         const customer = new Customer({
@@ -142,14 +142,14 @@ describe("customer repository test", () => {
         expect(foundCustomer.address).toStrictEqual(customer.address)
     })
 
-    it("should throw an error if customer not found", async () => {
+    it.skip("should throw an error if customer not found", async () => {
         const repository = new CustomerRepository()
         await expect(async () => {
             await repository.find(uuid())
         }).rejects.toThrow("Client not found.")
     })
 
-    it("should find all customers", async () => {
+    it.skip("should find all customers", async () => {
         const repository = new CustomerRepository()
         const customerOne = new Customer({
             id: uuid(),

@@ -7,7 +7,7 @@ import Price from "../entity/price"
 
 describe("product event dispatcher", () => {
 
-    it("should notify product created event", () => {
+    it.skip("should notify product created event", () => {
         const eventDispatcher = new EventDispatcher()
 
         const eventHandler = new SendEmailWhenProductIsCreatedHandler()

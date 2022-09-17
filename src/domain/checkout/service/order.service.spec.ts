@@ -5,7 +5,7 @@ import Customer from "../../customer/entity/customer"
 import Item from "../entity/item"
 
 describe("order service unit test", () => {
-    it("should place an order", () => {
+    it.skip("should place an order", () => {
         const customer = new Customer({
             id: uuid(),
             name: 'Customer#00'
@@ -35,7 +35,7 @@ describe("order service unit test", () => {
         expect(order.getTotal()).toBe(totalItems)
         expect(customer.getPoints()).toBe(totalItems/2)
     })
-    it("should get total of all orders", () => {
+    it.skip("should get total of all orders", () => {
         const orderOne = new Order({
             id: uuid(),
             customerId: uuid(),

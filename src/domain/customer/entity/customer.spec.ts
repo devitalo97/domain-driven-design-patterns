@@ -3,7 +3,7 @@ import Customer from "./customer"
 import { v4 as uuid } from 'uuid'
 
 describe("customer entity unit test", () => {
-    it("should throw an error when id is empty", () => {
+    it.skip("should throw an error when id is empty", () => {
         expect(() => {
             const customer = new Customer({
                 id: "",
@@ -21,7 +21,7 @@ describe("customer entity unit test", () => {
         }).toThrowError("Id is required.")
     })
 
-    it("should throw an error when name is empty", () => {
+    it.skip("should throw an error when name is empty", () => {
         expect(() => {
             const customer = new Customer({
                 id: uuid(),
@@ -39,7 +39,7 @@ describe("customer entity unit test", () => {
         }).toThrowError("Name is required.")
     })
 
-    it("should throw an error when trying to change the name to a blank string ", () => {
+    it.skip("should throw an error when trying to change the name to a blank string ", () => {
         const customer = new Customer({
             id: uuid(),
             name: "Customer#01",
@@ -59,7 +59,7 @@ describe("customer entity unit test", () => {
         }).toThrowError("Name is required.")
     })
 
-    it("should change name", () => {
+    it.skip("should change name", () => {
         const customer = new Customer({
             id: uuid(),
             name: "Customer#01",
@@ -79,7 +79,7 @@ describe("customer entity unit test", () => {
         expect(customer.name).toBe("Customer#02")
     })
 
-    it("should activate customer", () => {
+    it.skip("should activate customer", () => {
         const customer = new Customer({
             id: uuid(),
             name: "Customer#04",
@@ -99,7 +99,7 @@ describe("customer entity unit test", () => {
         expect(customer.isActive()).toBe(true)
     })
 
-    it("should deactivate customer", () => {
+    it.skip("should deactivate customer", () => {
         const customer = new Customer({
             id: uuid(),
             name: "Customer#04",
@@ -119,7 +119,7 @@ describe("customer entity unit test", () => {
         expect(customer.isActive()).toBe(false)
     })
 
-    it("should throw an error when trying to activate customer with no address", () => {
+    it.skip("should throw an error when trying to activate customer with no address", () => {
         const customer = new Customer({
             id: uuid(),
             name: "Customer#04",
@@ -132,7 +132,7 @@ describe("customer entity unit test", () => {
         
     })
 
-    it("should add reward points", () => {
+    it.skip("should add reward points", () => {
         const customer = new Customer({
             id: uuid(),
             name: "Customer#01",

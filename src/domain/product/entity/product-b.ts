@@ -5,13 +5,22 @@ import ProductInterface from "./product.interface"
 type ProductProps = {
     id: string
     prices: Price[]
-    name: string
+    name: string,
+    variant?: string
 }
 
-export default class Product implements ProductInterface{
+type ChangePriceProps = {
+    id: string,
+    label?: string,
+    value?: number
+    stock?: number,
+}
+
+export default class ProductB implements ProductInterface {
     private _id: string
     private _prices: Price[]
     private _name: string
+    private _variant: string
     
     constructor(props: ProductProps){
         assign(this, props)
@@ -34,7 +43,6 @@ export default class Product implements ProductInterface{
         this._name = name
         this.validate()
     }
-
 
     changePrice(price: ChangePriceProps){
         const props = Object.keys(price)
@@ -68,14 +76,12 @@ export default class Product implements ProductInterface{
         return this._id
     }
 
+    get variant(): string {
+        return this._variant
+    }
+
     get prices(): Price[] {
         return this._prices
     }
 }
 
-type ChangePriceProps = {
-    id: string,
-    label?: string,
-    value?: number
-    stock?: number,
-}

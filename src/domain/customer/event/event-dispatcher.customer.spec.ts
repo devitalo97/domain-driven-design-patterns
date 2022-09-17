@@ -9,7 +9,7 @@ import Customer from "../entity/customer"
 import EventDispatcher from "../../@shared/event/event-dispatcher"
 
 describe("customer event dispatcher test", () => {
-    it("it should notify customer created event", () => {
+    it.skip("it should notify customer created event", () => {
         const eventDispatcher = new EventDispatcher()
 
         const eventHandlerOne = new EnviaConsoleLogUmHandler()
@@ -50,7 +50,7 @@ describe("customer event dispatcher test", () => {
 
     })
 
-    it("should notify change address event", () => {
+    it.skip("should notify change address event", () => {
         const eventDispatcher = new EventDispatcher()
 
         const eventHandler = new EnviaConsoleLogHandler()

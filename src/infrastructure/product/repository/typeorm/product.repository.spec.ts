@@ -16,7 +16,7 @@ describe("product repository test", () => {
         await AppDataSource.destroy()
     })
 
-    it("should create a product", async () => {
+    it.skip("should create a product", async () => {
         const repository = new ProductRepository()
         const product = new Product({
             id: uuid(),
@@ -50,7 +50,7 @@ describe("product repository test", () => {
         })))
     })
 
-    it("should update a product", async () => {
+    it.skip("should update a product", async () => {
         const repository = new ProductRepository()
         const product = new Product({
             id: uuid(),
@@ -96,7 +96,7 @@ describe("product repository test", () => {
         })))
     })
 
-    it("should find a product by id", async () => {
+    it.skip("should find a product by id", async () => {
         const repository = new ProductRepository();
         const product = new Product({
             id: uuid(),
@@ -123,7 +123,7 @@ describe("product repository test", () => {
         expect(foundProduct.prices).toStrictEqual(product.prices)
     })
 
-    it("should find all products", async () => {
+    it.skip("should find all products", async () => {
         const repository = new ProductRepository();
         const product = new Product({
             id: uuid(),

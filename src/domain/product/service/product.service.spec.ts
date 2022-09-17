@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid'
 import ProductService from "./product.service"
 
 describe("order service unit test", () => {
-    it("should increase product's price in percentage", () => {
+    it.skip("should increase product's price in percentage", () => {
         const product0 = new Product({
             id: uuid(),
             name: "Product#00",
