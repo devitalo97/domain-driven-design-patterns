@@ -2,7 +2,7 @@ import Price from "./price"
 import { v4 as uuid } from 'uuid'
 
 describe("price entity unit test", () => {
-    it("should throw an error when price value is invalid", () => {
+    it.skip("should throw an error when price value is invalid", () => {
         expect(() => {
             const price = new Price({
                 id: uuid(),
@@ -22,7 +22,7 @@ describe("price entity unit test", () => {
         }).toThrowError("Value must be valid.")
     })
 
-    it("should throw an error when price stock is invalid", () => {
+    it.skip("should throw an error when price stock is invalid", () => {
         expect(() => {
             const price = new Price({
                 id: uuid(),
@@ -42,7 +42,7 @@ describe("price entity unit test", () => {
         }).toThrowError("Stock must be valid.")
     })
 
-    it("should throw an error when price label is empty", () => {
+    it.skip("should throw an error when price label is empty", () => {
         expect(() => {
             const price = new Price({
                 id: uuid(),
@@ -62,7 +62,7 @@ describe("price entity unit test", () => {
         }).toThrowError("Label is required.")       
     })
 
-    it("should throw an error when price id is empty", () => {
+    it.skip("should throw an error when price id is empty", () => {
         expect(() => {
             const price = new Price({
                 id: "",
